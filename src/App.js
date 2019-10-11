@@ -1,14 +1,17 @@
 import React from 'react';
 import './App.css';
 import Example from './components/hooks/Example'
+import Welcome from './components/general/Welcome'
+import Clock from './components/general/Clock'
 
 function App() {
-  return (
+  return (    
     <div className="App">
       <header className="App-header">
-        <p>
-          My React Test App from Frank
-        </p>
+        <Clock/>
+        <Clock updateInterval={5}/>
+        <Clock/>
+        <Welcome name='Franklin'/>
         <Example/>
       </header>
     </div>
