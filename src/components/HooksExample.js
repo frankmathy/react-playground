@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-function Example() {
+function HooksExample() {
     const [count, setCount] = useState(0);
 
     const user = {
@@ -36,4 +36,4 @@ function Example() {
 }
 
 
-export default Example
+export default HooksExample
