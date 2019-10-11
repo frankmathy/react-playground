@@ -13,19 +13,18 @@ function App() {
   return (    
     <div className="App">
       <header className="App-header">
+      </header>
         <BrowserRouter>
           <Navigation/>
-          <hr/>
           <Welcome name='Franklin'/>
           <Switch>
-            <Route path='/clock' component={Clock}/>
+            <Route path='/clock' component={Clock}/> 
             <Route path='/events' component={EventsTest}/>
             <Route path='/hooks' component={Example}/>
             <Route path='/form' component={NameForm}/>
             <Route path='/list' render={(props) => <ListComponent {...props} numbers={[1,4,9,3,7]}/>}/>
           </Switch>
         </BrowserRouter>
-      </header>
     </div>
   );
 }

@@ -25,12 +25,10 @@ class EventsTest extends Component {
     render() {
         return (
             <>
-            <a href="#" onClick={this.handleClick}>
-                Click me
-            </a>
-            <button onClick={this.handleButtonClick}>
+            <p><a href="#" onClick={this.handleClick}>Click me</a>&nbsp;</p>
+            <p><button onClick={this.handleButtonClick}>
                 {this.state.isToggleOn ? 'ON' : 'OFF' }
-            </button>
+            </button></p>
             </>
         )
     }

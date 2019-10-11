@@ -9,7 +9,7 @@ class NameForm extends React.Component {
     }
 
     handleChange(event) {
-        this.setState({value: event.target.value.toUpperCase()})
+        this.setState({value: event.target.value})
     }
 
     handleSubmit(event) {
@@ -21,9 +21,9 @@ class NameForm extends React.Component {
         return (
             <form onSubmit={this.handleSubmit}>
                 <label>
-                    Name:
+                    Name:&nbsp;
                     <input type="text" value={this.state.value} onChange={this.handleChange}/>
-                </label>
+                </label>&nbsp;
                 <input type="submit" value="Submit"/>
                 <p>Eingegebener Wert: {this.state.value}</p>
             </form>
