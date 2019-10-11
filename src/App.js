@@ -5,6 +5,7 @@ import Welcome from './components/general/Welcome'
 import Clock from './components/general/Clock'
 import EventsTest from './components/general/EventsTest'
 import ListComponent from './components/general/ListComponent'
+import NameForm from './components/general/NameForm'
 
 function App() {
   return (    
@@ -14,6 +15,7 @@ function App() {
         <EventsTest/>
         <Welcome name='Franklin'/>
         <Example/>
+        <NameForm/>
         <ListComponent numbers={[1,4,9,3,7]}/>
       </header>
     </div>
