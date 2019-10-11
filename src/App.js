@@ -6,17 +6,25 @@ import Clock from './components/general/Clock'
 import EventsTest from './components/general/EventsTest'
 import ListComponent from './components/general/ListComponent'
 import NameForm from './components/general/NameForm'
+import {BrowserRouter, Switch, Route} from 'react-router-dom'
+import Navigation from './components/general/Navigation'
 
 function App() {
   return (    
     <div className="App">
       <header className="App-header">
-        <Clock/>
-        <EventsTest/>
-        <Welcome name='Franklin'/>
-        <Example/>
-        <NameForm/>
-        <ListComponent numbers={[1,4,9,3,7]}/>
+        <BrowserRouter>
+          <Navigation/>
+          <hr/>
+          <Welcome name='Franklin'/>
+          <Switch>
+            <Route path='/clock' component={Clock}/>
+            <Route path='/events' component={EventsTest}/>
+            <Route path='/hooks' component={Example}/>
+            <Route path='/form' component={NameForm}/>
+            <Route path='/list' render={(props) => <ListComponent {...props} numbers={[1,4,9,3,7]}/>}/>
+          </Switch>
+        </BrowserRouter>
       </header>
     </div>
   );
